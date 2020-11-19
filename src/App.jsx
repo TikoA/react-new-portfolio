@@ -1,8 +1,8 @@
 import React from 'react';
+import Welcome from './components/Welcome';
 import About from './components/About';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Welcome from './components/Welcome';
 
 function App() {
 
