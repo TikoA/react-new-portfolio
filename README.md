@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-# Live - <a href="https://bit.ly/tikport">Here</a>
+# Live Demo - <a href="https://bit.ly/tikport">Here</a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
