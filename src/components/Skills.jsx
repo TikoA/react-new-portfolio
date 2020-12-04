@@ -1,6 +1,33 @@
 import { Box, Button, Link, Text } from '@chakra-ui/core'
 
-const Skills = () => {
+const Skills = ({lang, setLang}) => {
+    let info;
+
+    switch (lang) {
+      case 'EN':
+        info = {
+          skill: 'Skills'
+        }
+        break;
+      case 'DE':
+        info = {
+          skill: 'Sprachkenntnisse'
+        }
+        break; 
+      case 'RU':
+        info = {
+          skill: 'Навыки'
+        }
+        break;     
+      case 'AM':
+        info = {
+          skill: 'Հնարհքներ'
+        }
+        break;
+      default:
+        break;
+    }
+
     return (
         <Box 
             width='100%' 
@@ -8,7 +35,7 @@ const Skills = () => {
             backgroundColor='gray.700'
             textAlign='center'
         >
-            <Text color='white' fontFamily='Mechanical, Franklin Gothic Medium' fontSize='5xl'>Skills</Text>
+            <Text color='white' fontFamily='Mechanical, Franklin Gothic Medium' fontSize='5xl'>{info.skill}</Text>
             <Box display='flex' justifyContent='center' alignItems='center' flexWrap='wrap'>
                 <Text marginRight='1rem' fontSize='6xl'><i class="devicon-html5-plain-wordmark colored"></i></Text>
                 <Text marginRight='1rem' fontSize='6xl'><i class="devicon-vuejs-plain colored"></i></Text>
