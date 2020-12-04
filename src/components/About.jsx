@@ -1,7 +1,40 @@
 const { Box, Image, Text, Stack, Badge, Link, Divider } = require("@chakra-ui/core")
 
 
-const About = () => {
+const About = ({lang, setLang}) => {
+    let info;
+
+    switch (lang) {
+      case 'EN':
+        info = {
+          about: `I am self-taught front-end (full-stack) web developer from Yerevan 
+                    learning new technologies every day constantly from books, internet, youtube, 
+                    and other. I like programming and developing, use many frameworks and libraries.
+                    I like to expiriment with new frameworks and languages. Visit my github to see all
+                    my projects.
+                    I support Artsakh and Armenia.`
+        }
+        break;
+      case 'DE':
+        info = {
+          about: `Ich heiße Tigran Arschakian. Ich bin 16 Jahre alt. Ich wohne in Jerewan (Armenia) und lerne Programming.
+                  Ich studiere in PHS und ich liebe nicht die Schule. Ich liebe Arzach und Armenia. Ich liebe React und Vue. Ich bin Javaßkript Entwickler. `
+        }
+        break; 
+      case 'RU':
+        info = {
+          about: 'Меня зовут Тигран Аршакян, мне 16 лет, я учусь программированию и живу в Ереване (Армения), Учусь новому каждый день, и не боюсь мечтать)'
+        }
+        break;     
+      case 'AM':
+        info = {
+          about: 'Ես Տիգրան Արշակյանն եմ, 16 տարեկան եմ և սովորում եմ ծրագրավորում ինքնուսուցման մեթոդով։ Սովորում եմ տիրապետել նոր հնարհքների ամեն օր, և գնում եմ առաջ։'
+        }
+        break;
+      default:
+        break;
+    }
+
     return (
         <Box 
             display='flex'
@@ -57,12 +90,7 @@ const About = () => {
                 borderBottomRightRadius='4px'
             >
                 <Text fontFamily="Helvetica" fontSize='md' fontWeight='600' fontSize='1rem'>
-                    I am self-taught front-end (full-stack) web developer from Yerevan 
-                    learning new technologies every day constantly from books, internet, youtube, 
-                    and other. I like programming and developing, use many frameworks and libraries.
-                    I like to expiriment with new frameworks and languages. Visit my github to see all
-                    my projects.
-                    I support Artsakh and Armenia. 
+                    {info.about} 
                     <Link color='red.500'>#Reco</Link>
                     <Link color='blue.500'>gnizeA</Link>
                     <Link color='orange.500'>rtsakh</Link>
