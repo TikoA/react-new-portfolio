@@ -35,7 +35,7 @@ const Skills = ({lang, setLang}) => {
             backgroundColor='gray.700'
             textAlign='center'
         >
-            <Text color='white' fontFamily='Mechanical, Franklin Gothic Medium' fontSize='5xl'>{info.skill}</Text>
+            <Text color='white' fontFamily='Mechanical, Franklin Gothic Medium' fontSize={['5xl','2xl'].reverse()}>{info.skill}</Text>
             <Box display='flex' justifyContent='center' alignItems='center' flexWrap='wrap'>
                 <Text marginRight='1rem' fontSize='6xl'><i class="devicon-html5-plain-wordmark colored"></i></Text>
                 <Text marginRight='1rem' fontSize='6xl'><i class="devicon-vuejs-plain colored"></i></Text>
